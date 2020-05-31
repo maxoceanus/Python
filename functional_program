@@ -1,0 +1,30 @@
+函数式编程是一种编程范式，它将计算机运算视为数学上的函数计算，并且避免使用程序状态以及易变对象
+
+python中，函数式编程主要由几个函数的使用构成：lambda(),map(),reduce(),filter()
+
+
+1.lambda
+例：f = lambda x : x+2 		#定义函数f(x) = x+2
+g = lambda x, y: x+y		#定义函数g(x,y) = x+y
+
+
+2.map
+题目：假设有一个列表 a=[1,2,3],要给列表中每个元素加2得到一个新列表
+常规解法： b = [i+2 for i in a]
+使用map(): b = map(lambda x: x+2, a); b = list(b)
+解析：首先利用lambda定义一个函数，然后用map()命令将函数逐一应用到a列表中的每个元素
+
+
+3.reduce
+题目：计算n的阶乘
+使用reduce(): reduce(lambda x,y: x*y, range(1, n+1))
+解析：reduce命令首先将列表的前两个元素作为函数参数进行运算，然后将运算结果与第三个数字作为函数的参数，然后再将运算结果与第四个参数作为函数参数...直到列表结束
+
+
+4.filter
+题目：过滤出列表中在(5,8)区间的元素
+使用filter: reduce(lambda x: x>5 and x<8, range(10))
+解析：filter()函数首先需要一个返回值为bool型的函数，如上述的lambda表达式，将该函数作用与列表中的每一个元素，挑出函数返回true的元素，组成一个列表返回
+
+
+

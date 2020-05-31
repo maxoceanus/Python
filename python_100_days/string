@@ -1,0 +1,109 @@
+字符串和常用数据结构
+
+1.转义字符
+-\n表示换行符
+-\t表示制表符
+-在字符最前面加上字母r可以取消\的转义功能
+
+2.字符串处理
+-‘+’：实现字符串的拼接
+-‘*’：重复字符串内容
+-‘in’ or ‘not in’：判断一个字符串中是否包含另外一个字符串
+-[] and [:] ：从字符串去除某个字符或某些字符，即切片操作
+
+-len(str1)：返回字符串长度
+-str1.capitalize()：将字符串首字母大写
+-str1.title()：将每个单词首字母大写
+-str1.upper()：获得字符串变大写后的拷贝
+-str1.find('str2')：从字符串中查找子串位置，未找到返回-1
+-str1.index('str2')：类似find，找不到字串时会引发异常
+-str1.startswith('str2')：检查字符串是否以指定的字符串开头
+-str1.endswith('str2')：检查字符串是否以指定的字符串结尾
+-str1.center(50,'*')：将字符串以指定宽度居中并在两侧填充指定字符
+-str1.rjust(50,' ')：将字符串以指定宽度靠右放置左侧填充指定的字符
+-str1.isdigit()：检查字符串是否以数字构成
+-str1.isalpha()：检查字符串是否已字母构成
+-str1.isalnum()：检查字符串是否以数字和字母构成
+-str1.strip()：获得字符串修剪左右两侧空格之后的拷贝
+
+3.格式化字符串
+-print('%d * %d = %d' % (a, b, a * b))
+-print('{0} * {1} = {2}'.format(a, b, a*b))
+-print(f'{a}*{b} = {a*b}')
+
+4.列表
+-列表元素可以用[],[:]选用，可以用for循环对列表元素进行遍历
+-len(list1)
+-list1.append(a)：添加元素
+-list1.insert(index,a)：指定位置添加元素
+-list1 += list2：合并列表
+-list1.extend(list2)：合并列表
+-list1.pop(index)：从指定的位置删除元素
+-list1.clear()：清空列表元素
+-list1[::-1]：反向切片操作，得到列表倒转后的列表
+-list1 = sorted(list2)：列表排序
+
+列表生成式：-f = [x for x in range(1,10)]
+			-f = [x + y for x in 'ACDE' for y in '12345']
+列表生成器：-f = (x**2 for x in range(1,1000))
+			-每次需要数据的时候可以通过内部运算得到数据，不占用空间
+			-遍历： for val in f: print(val)
+
+5.yield
+-作用：可以将一个普通函数改造成生成器函数
+
+6.元组
+-定义：多个元素的组合，无法修改
+-定义元组：t = ('成旭‘，25，'Man)
+-tuple1 = tuple(list1)：将列表转换成元组
+
+-创建元组：set1 = {1,2,3,4}
+-创建集合的构造器：set2 = set(range(1,10))\set3 = set((1,2,3,4))
+-创建集合的推导式语法：set4 = {n for n in range(1,100) if num%3==0 or num%5==0}
+
+--集合添加元素：set1.add(4)\set.update([11,12])
+--集合删除元素：set1.discard(4)\if..set1.remove(4)\set1.pop()
+
+--集合的交集：set1 & set2
+--集合的并集：set1 | set2
+--集合的差集：set1 - set2
+--集合的对称差运算：set1 ^ set2
+--判断子集：set2 <= set1   or   set2.issubset(set1)
+--判断超集：set1 >= set2   or   set1.issuperset(set2)
+
+
+7.字典
+-定义：字典的每个元素由一个键和一个值组成的“键值对”
+-创建字典：socres = {‘张三’：90，‘李四’：84，‘王五’：99}
+-构造器：items1 = dict(one=1, two=2, three=3, four=4)
+-zip函数将两个序列压成字典：items2 = dict(zip(['a','b','c'],'123'))
+-创建字典的推导式语句：items3 = {n:num**2 for n in range(1,100)}
+-items1.get('key',默认值)：通过键获取对应的值，可以设置默认值
+-items1.popitem()：删除字典最后一个键值对
+-items1.pop('key',value)：删除特定键值对
+-items1.clear()：清空字典
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
